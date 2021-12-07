@@ -245,6 +245,7 @@ footer.christmas-footer {
   background-color: white;
   color: black;
   padding: 50px 30px 50px 30px;
+  overflow: auto;
 }
 
 .door-modal .header {
