@@ -13,11 +13,11 @@ import filmObjectData from "../modules/data.js";
 const FILM_API = "https://api.themoviedb.org/3/movie/";
 const FILM_API_KEY = "8f183f1fe952c43a5e9c4cdbe5b190da";
 
-const CURRENT_DATE = new Date("November 5"); // remove value in production
+const CURRENT_DATE = new Date(); // remove value in production "November 5"
 
-console.log(
+/*console.log(
   "for testing puposes the date is currently set as November 5. Change in script.js, line 16"
-);
+);*/
 
 const populateModal = (dataWeWant) => {
   let dayModal = document.querySelector(".door-modal");
