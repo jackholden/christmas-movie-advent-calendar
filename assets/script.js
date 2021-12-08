@@ -1,4 +1,5 @@
-/*TODO: tidy code, 
+/*Improvements: tidy code, 
+USE GIT
 tonnes of cleanup, 
 reduce repeated and put into const/let, 
 improve css styling, 
@@ -51,34 +52,6 @@ const populateModal = (dataWeWant) => {
 const fetchFilmData = function (event, filmId, filmDay) {
   console.log(event);
   console.log(filmDay);
-
-  /*if (filmId === "multiple") {
-    let groupArray = JSON.stringify(filmObjectData).indexOf("multiple") > -1;
-
-    const filmList = groupArray.map((film) => {});
-
-    Promise.all([
-      fetch(FILM_API + filmId + "?api_key=" + FILM_API_KEY),
-      fetch(FILM_API + filmId + "?api_key=" + FILM_API_KEY),
-    ])
-      .then(function (responses) {
-        // Get a JSON object from each of the responses
-        return Promise.all(
-          responses.map(function (response) {
-            return response.json();
-          })
-        );
-      })
-      .then(function (data) {
-        // Log the data to the console
-        // You would do something with both sets of data here
-        console.log(data);
-      })
-      .catch(function (error) {
-        // if there's an error, log it
-        console.log(error);
-      });
-  }*/
 
   let xhr = new XMLHttpRequest();
 
@@ -149,8 +122,8 @@ const filmList = filmObjectData.map((film) => {
   // Add event listener
   button.addEventListener("click", (event) => {
     if (
-      (CURRENT_DATE.getMonth() === 10 && CURRENT_DATE.getDate() === filmDay) ||
-      (CURRENT_DATE.getMonth() === 10 && CURRENT_DATE.getDate() >= filmDay) //should be 11 for december but lets pretend with 10 for testing
+      (CURRENT_DATE.getMonth() === 11 && CURRENT_DATE.getDate() === filmDay) ||
+      (CURRENT_DATE.getMonth() === 11 && CURRENT_DATE.getDate() >= filmDay) //should be 11 for december but lets pretend with 10 for testing
     ) {
       fetchFilmData(event, film.film_id, filmDay);
       filmItem.classList.add("open");
